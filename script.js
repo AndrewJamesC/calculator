@@ -84,6 +84,21 @@ num.push(0);
 console.log(num);
 });
 
+const buttonDecimal = document.querySelector(".decimalPoint");
+buttonDecimal.addEventListener("click", ()=> {
+num.push(".");
+console.log(num);
+});
+
+const buttonClear = document.querySelector(".clearButton");
+buttonClear.addEventListener("click", ()=> {
+    num = [];
+    num1 = "";
+    num2 = "";
+    operator = "";
+
+});
+
 const division = document.querySelector(".divideButton");
 division.addEventListener("click", () => {
     if (num1 === ""){
