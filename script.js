@@ -118,6 +118,8 @@ buttonClear.addEventListener("click", ()=> {
     num2 = "";
     operator = "";
     console.log("clear" + num, num1, num2, operator);
+    screenContent.textContent = "";
+    screenContent.append;
 
 });
 
