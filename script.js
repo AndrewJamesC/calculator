@@ -17,77 +17,98 @@ function operate(num1, num2, operator) {
     };
 };
 
-console.log("the test result of the operate function is " + operate(1, 5, "/"));
-
 let num = [];
 let num1 = "";
 let num2 = "";
 let operator = "";
+const screenContent = document.querySelector(".screen");
 
 const button7 = document.querySelector(".number7");
 button7.addEventListener("click", ()=> {
 num.push(7);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button8 = document.querySelector(".number8");
 button8.addEventListener("click", ()=> {
 num.push(8);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button9 = document.querySelector(".number9");
 button9.addEventListener("click", ()=> {
 num.push(9);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button4 = document.querySelector(".number4");
 button4.addEventListener("click", ()=> {
 num.push(4);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button5 = document.querySelector(".number5");
 button5.addEventListener("click", ()=> {
 num.push(5);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button6 = document.querySelector(".number6");
 button6.addEventListener("click", ()=> {
 num.push(6);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button1 = document.querySelector(".number1");
 button1.addEventListener("click", ()=> {
 num.push(1);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button2 = document.querySelector(".number2");
 button2.addEventListener("click", ()=> {
 num.push(2);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button3 = document.querySelector(".number3");
 button3.addEventListener("click", ()=> {
 num.push(3);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const button0 = document.querySelector(".number0");
 button0.addEventListener("click", ()=> {
 num.push(0);
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const buttonDecimal = document.querySelector(".decimalPoint");
 buttonDecimal.addEventListener("click", ()=> {
 num.push(".");
 console.log(num);
+screenContent.textContent = num.join("");
+screenContent.append;
 });
 
 const buttonClear = document.querySelector(".clearButton");
@@ -177,3 +198,4 @@ addition.addEventListener("click", () => {
         console.log("the total is " + operate(num1, num2, operator));
     };
 });
+
