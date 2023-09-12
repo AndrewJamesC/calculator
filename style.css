@@ -22,4 +22,5 @@ button{
 
 .clear{
     background-color: rgb(255, 136, 0);
+    width: 100%;
 }
