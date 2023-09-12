@@ -137,3 +137,21 @@ subtraction.addEventListener("click", () => {
         console.log("the total is " + operate(num1, num2, operator));
     };
 });
+
+const addition = document.querySelector(".additionButton");
+addition.addEventListener("click", () => {
+    if (num1 === ""){
+        num1 = Number(num.join(""));
+        console.log("num1 is " + num1);
+        num = [];
+        console.log("num is " + num);
+        operator = "+";
+        console.log("operator is " + operator);
+    } else if (num1 !== "") {
+        num2 = Number(num.join(""));
+        console.log("num2 is " + num2);
+        num = [];
+        console.log("num is " + num);
+        console.log("the total is " + operate(num1, num2, operator));
+    };
+});
