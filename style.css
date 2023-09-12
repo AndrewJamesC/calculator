@@ -24,3 +24,9 @@ button{
     background-color: rgb(255, 136, 0);
     width: 100%;
 }
+
+.clearButton:active {
+    background-color: rgb(183, 98, 1);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

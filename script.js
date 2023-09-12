@@ -96,6 +96,7 @@ buttonClear.addEventListener("click", ()=> {
     num1 = "";
     num2 = "";
     operator = "";
+    console.log("clear" + num, num1, num2, operator);
 
 });
 
