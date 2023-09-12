@@ -119,3 +119,21 @@ multiply.addEventListener("click", () => {
         console.log("the total is " + operate(num1, num2, operator));
     };
 });
+
+const subtraction = document.querySelector(".subtractButton");
+subtraction.addEventListener("click", () => {
+    if (num1 === ""){
+        num1 = num.join("");
+        console.log("num1 is " + num1);
+        num = [];
+        console.log("num is " + num);
+        operator = "-";
+        console.log("operator is " + operator);
+    } else if (num1 !== "") {
+        num2 = num.join("");
+        console.log("num2 is " + num2);
+        num = [];
+        console.log("num is " + num);
+        console.log("the total is " + operate(num1, num2, operator));
+    };
+});
