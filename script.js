@@ -18,3 +18,10 @@ function operate(num1, num2, operator) {
 };
 
 console.log("the function is " + operate(1, 5, "/"));
+
+let num = [];
+const button7 = document.querySelector(".number7");
+button7.addEventListener("click", ()=> {
+num.push(7);
+console.log(num);
+});
