@@ -100,6 +100,12 @@ buttonClear.addEventListener("click", ()=> {
 
 });
 
+const buttonEquals = document.querySelector(".equalsButton");
+buttonEquals.addEventListener("click", ()=> {
+    num2 = Number(num.join(""));
+    console.log("the total is " + operate(num1, num2, operator));
+});
+
 const division = document.querySelector(".divideButton");
 division.addEventListener("click", () => {
     if (num1 === ""){
