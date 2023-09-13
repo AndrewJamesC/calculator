@@ -1,13 +1,3 @@
-const buttonClear = document.querySelector(".clearButton");
-buttonClear.addEventListener("click", ()=> {
-    num = [];
-    num1 = "";
-    num2 = "";
-    operator = "";
-    screenContent.textContent = "";
-    screenContent.append;
-
-});
 
 function operate(num1, num2, operator) {
     const arr = [num1, num2];
@@ -133,11 +123,25 @@ buttonEquals.addEventListener("click", ()=> {
     num2 = "";
 });
 
+
+const buttonClear = document.querySelector(".clearButton");
+buttonClear.addEventListener("click", ()=> {
+    num = [];
+    num1 = "";
+    num2 = "";
+    operator = "";
+    resultOfCalculation = "";
+    screenContent.textContent = "";
+    screenContent.append;
+
+});
+
 const division = document.querySelector(".divideButton");
 division.addEventListener("click", () => {
     if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "/";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -148,6 +152,7 @@ division.addEventListener("click", () => {
         operator = "/";
     } else if (num1 !== "") {
         num2 = Number(num.join(""));
+        operator = "/";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -157,6 +162,7 @@ division.addEventListener("click", () => {
     } else if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "/";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -170,6 +176,7 @@ multiply.addEventListener("click", () => {
     if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "*";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -180,6 +187,7 @@ multiply.addEventListener("click", () => {
         operator = "*";
     } else if (num1 !== "") {
         num2 = Number(num.join(""));
+        operator = "*";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -189,6 +197,7 @@ multiply.addEventListener("click", () => {
     } else if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "*";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -202,6 +211,7 @@ subtraction.addEventListener("click", () => {
     if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "-";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -212,6 +222,7 @@ subtraction.addEventListener("click", () => {
         operator = "-";
     } else if (num1 !== "") {
         num2 = Number(num.join(""));
+        operator = "-";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -221,6 +232,7 @@ subtraction.addEventListener("click", () => {
     } else if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "-";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -234,6 +246,7 @@ addition.addEventListener("click", () => {
     if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "+";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -244,6 +257,7 @@ addition.addEventListener("click", () => {
         operator = "+";
     } else if (num1 !== "") {
         num2 = Number(num.join(""));
+        operator = "+";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
@@ -253,6 +267,7 @@ addition.addEventListener("click", () => {
     } else if (resultOfCalculation !== "") {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
+        operator = "+";
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = resultOfCalculation;
         screenContent.append;
