@@ -96,9 +96,13 @@ screenContent.append;
 
 const buttonDecimal = document.querySelector(".decimalPoint");
 buttonDecimal.addEventListener("click", ()=> {
-num.push(".");
-screenContent.textContent = num.join("");
-screenContent.append;
+    if(num.includes(".")){
+
+    } else{
+    num.push(".");
+    screenContent.textContent = num.join("");
+    screenContent.append;
+    };
 });
 
 
