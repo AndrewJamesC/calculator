@@ -23,22 +23,28 @@ button{
 }
 
 .clearButton{
-    background-color: rgb(255, 136, 0);
+    background-color: rgb(178, 158, 134);
     color: white;
     width: 100%;
     font-size: 50px;
     border: 3px solid black;
 }
+.operator:hover, .clearButton:hover{
+    filter: brightness(120%);
+ }
 
 .clearButton:active, .operator:active {
-    background-color: rgb(0, 0, 0);
+    filter: brightness(65%);
     box-shadow: 0 5px #666;
     transform: translateY(4px);
   }
 
   .operator{
-    background-color: rgb(2, 87, 2);
+    background-color: rgb(70, 87, 70);
     color:white;
   };
 
+ .operator:hover {
+    background-color: rgb(220, 245, 230);
+ }
    
