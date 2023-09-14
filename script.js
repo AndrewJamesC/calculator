@@ -151,7 +151,7 @@ const buttonEquals = document.querySelector(".equalsButton");
 buttonEquals.addEventListener("click", ()=> {
     if (num.length === 0){
         
-    }else if(operator === "/" && num == 0){
+    }else if(operator === "/" && Number(num.join("")) === 0){
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (resultOfCalculation === ""){
@@ -193,7 +193,7 @@ const division = document.querySelector(".divideButton");
 division.addEventListener("click", () => {
     if(num.length === 0 && resultOfCalculation !== ""){
         operator = "/";
-    }else if(operator === "/" && num == 0){
+    }else if(operator === "/" && Number(num.join("")) === 0){
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (num.length === 0 && resultOfCalculation === ""){
@@ -225,7 +225,7 @@ const multiply = document.querySelector(".multiplyButton");
 multiply.addEventListener("click", () => {
     if(num.length === 0 && resultOfCalculation !== ""){
         operator = "*";
-    }else if(operator === "/" && num == 0){
+    }else if(operator === "/" && Number(num.join("")) === 0){
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (num.length === 0 && resultOfCalculation === ""){
@@ -257,7 +257,7 @@ const subtraction = document.querySelector(".subtractButton");
 subtraction.addEventListener("click", () => {
     if(num.length === 0 && resultOfCalculation !== ""){
         operator = "-";
-    }else if(operator === "/" && num == 0){
+    }else if(operator === "/" && Number(num.join("")) === 0){
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (num.length === 0 && resultOfCalculation === ""){
@@ -289,7 +289,7 @@ const addition = document.querySelector(".additionButton");
 addition.addEventListener("click", () => {
     if(num.length === 0 && resultOfCalculation !== ""){
         operator = "+";
-    }else if(operator === "/" && num == 0){
+    }else if(operator === "/" && Number(num.join("")) === 0){
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (num.length === 0 && resultOfCalculation === ""){
