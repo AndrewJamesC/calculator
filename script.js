@@ -26,72 +26,112 @@ const screenContent = document.querySelector(".screen");
 
 const button7 = document.querySelector(".number7");
 button7.addEventListener("click", ()=> {
-num.push(7);
+if(num.length > 5) {
+
+}else{
+    num.push(7);
 screenContent.textContent = num.join("");
 screenContent.append;
+};
 });
 
 const button8 = document.querySelector(".number8");
 button8.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(8);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button9 = document.querySelector(".number9");
 button9.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(9);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button4 = document.querySelector(".number4");
 button4.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(4);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button5 = document.querySelector(".number5");
 button5.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(5);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button6 = document.querySelector(".number6");
 button6.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(6);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button1 = document.querySelector(".number1");
 button1.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(1);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button2 = document.querySelector(".number2");
 button2.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(2);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button3 = document.querySelector(".number3");
 button3.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(3);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const button0 = document.querySelector(".number0");
 button0.addEventListener("click", ()=> {
+    if(num.length > 5) {
+
+    }else{
 num.push(0);
 screenContent.textContent = num.join("");
 screenContent.append;
+    };
 });
 
 const buttonDecimal = document.querySelector(".decimalPoint");
