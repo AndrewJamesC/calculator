@@ -3,7 +3,7 @@ function operate(num1, num2, operator) {
     const arr = [num1, num2];
     let add = arr.reduce((total, current) => total + current,0);
     let subtract = arr.reduce((total, current) => total - current);
-    let multiply = arr.reduce((total, current) => total * current);
+    let multiply = arr.reduce((total, current) => total * current,1);
     let divide = arr.reduce((total, current) => total / current);
     if(operator === "+") {
         return add;
@@ -21,6 +21,7 @@ let num1 = "";
 let num2 = "";
 let operator = "";
 let resultOfCalculation = "";
+let equals = "";
 const screenContent = document.querySelector(".screen");
 
 const button7 = document.querySelector(".number7");
@@ -115,12 +116,18 @@ screenContent.append;
 
 const buttonEquals = document.querySelector(".equalsButton");
 buttonEquals.addEventListener("click", ()=> {
+    if (num.length === 0){
+
+    }else{
     num2 = Number(num.join(""));
     resultOfCalculation = operate(num1, num2, operator);
     screenContent.textContent = resultOfCalculation;
     screenContent.append;
     num = [];
+    num1 = resultOfCalculation;
     num2 = "";
+    operator = "";
+    }
 });
 
 
@@ -131,6 +138,7 @@ buttonClear.addEventListener("click", ()=> {
     num2 = "";
     operator = "";
     resultOfCalculation = "";
+    error = "";
     screenContent.textContent = "";
     screenContent.append;
 
@@ -138,141 +146,119 @@ buttonClear.addEventListener("click", ()=> {
 
 const division = document.querySelector(".divideButton");
 division.addEventListener("click", () => {
-    if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
+    if(num.length === 0 && resultOfCalculation !== ""){
         operator = "/";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-    } else if (num1 === ""){
-        num1 = Number(num.join(""));
-        num = [];
-        operator = "/";
-    } else if (num1 !== "") {
-        num2 = Number(num.join(""));
-        operator = "/";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-        console.log("num is " + num);
-        console.log("the total is " + resultOfCalculation);
-    } else if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
-        operator = "/";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
+    }else if (num.length === 0 && resultOfCalculation === ""){
 
+    } else if(num1 === ""){
+        num1 = Number(num.join(""));
+        operator = "/";
+        num = [];
+    } else if(num2 === "" && resultOfCalculation === ""){
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        num = [];
+        operator = "/";
+    } else if (resultOfCalculation !== ""){
+        num1 = resultOfCalculation;
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        num = [];
+        operator = "/";
     }
 });
+
 
 const multiply = document.querySelector(".multiplyButton");
 multiply.addEventListener("click", () => {
-    if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
+    if(num.length === 0 && resultOfCalculation !== ""){
         operator = "*";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-    } else if (num1 === ""){
-        num1 = Number(num.join(""));
-        num = [];
-        operator = "*";
-    } else if (num1 !== "") {
-        num2 = Number(num.join(""));
-        operator = "*";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-        console.log("num is " + num);
-        console.log("the total is " + resultOfCalculation);
-    } else if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
-        operator = "*";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
+    }else if (num.length === 0 && resultOfCalculation === ""){
 
+    }else if(num1 === ""){
+        num1 = Number(num.join(""));
+        operator = "*";
+        num = [];
+    } else if(num2 === "" && resultOfCalculation === ""){
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        num = [];
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        operator = "*";
+        }  else if (resultOfCalculation !== ""){
+        num1 = resultOfCalculation;
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        num = [];
+        operator = "*";
     }
 });
+
 
 const subtraction = document.querySelector(".subtractButton");
 subtraction.addEventListener("click", () => {
-    if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
+    if(num.length === 0 && resultOfCalculation !== ""){
         operator = "-";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-    } else if (num1 === ""){
-        num1 = Number(num.join(""));
-        num = [];
-        operator = "-";
-    } else if (num1 !== "") {
-        num2 = Number(num.join(""));
-        operator = "-";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-        console.log("num is " + num);
-        console.log("the total is " + resultOfCalculation);
-    } else if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
-        operator = "-";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
+    }else if (num.length === 0 && resultOfCalculation === ""){
 
+    } else if(num1 === ""){
+        num1 = Number(num.join(""));
+        operator = "-";
+        num = [];
+    } else if(num2 === "" && resultOfCalculation === ""){
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        num = [];
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        operator = "-";
+    } else if (resultOfCalculation !== ""){
+        num1 = resultOfCalculation;
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        num = [];
+        operator = "-";
     }
 });
 
+
 const addition = document.querySelector(".additionButton");
 addition.addEventListener("click", () => {
-    if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
+    if(num.length === 0 && resultOfCalculation !== ""){
         operator = "+";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-    } else if (num1 === ""){
-        num1 = Number(num.join(""));
-        num = [];
-        operator = "+";
-    } else if (num1 !== "") {
-        num2 = Number(num.join(""));
-        operator = "+";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
-        console.log("num is " + num);
-        console.log("the total is " + resultOfCalculation);
-    } else if (resultOfCalculation !== "") {
-        num1 = resultOfCalculation;
-        num2 = Number(num.join(""));
-        operator = "+";
-        resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = resultOfCalculation;
-        screenContent.append;
-        num = [];
+    }else if (num.length === 0 && resultOfCalculation === ""){
 
+    } else if(num1 === ""){
+        console.log("cant be here?");
+        num1 = Number(num.join(""));
+        operator = "+";
+        num = [];
+    } else if(num2 === "" && resultOfCalculation === ""){
+        console.log("#2 here?")
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        num = [];
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        operator = "+";
+        } else if (resultOfCalculation !== ""){
+            console.log("are we here?");
+        num1 = resultOfCalculation;
+        num2 = Number(num.join(""));
+        resultOfCalculation = operate(num1, num2, operator);
+        screenContent.textContent = resultOfCalculation;
+        screenContent.append;
+        num = [];
+        operator = "+";
     }
 });
 
