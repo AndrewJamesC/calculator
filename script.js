@@ -6,13 +6,13 @@ function operate(num1, num2, operator) {
     let multiply = arr.reduce((total, current) => total * current,1);
     let divide = arr.reduce((total, current) => total / current);
     if(operator === "+") {
-        return add;
+        return add.toFixed(3);
     } else if (operator === "-") {
-        return subtract;
+        return subtract.toFixed(3);
     } else if (operator === "*") {
-        return multiply;
+        return multiply.toFixed(3);
     } else if (operator === "/") {
-        return divide;
+        return divide.toFixed(3);
     };
 };
 
