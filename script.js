@@ -117,8 +117,10 @@ screenContent.append;
 const buttonEquals = document.querySelector(".equalsButton");
 buttonEquals.addEventListener("click", ()=> {
     if (num.length === 0){
+        console.log("first Equals");
 
-    }else{
+    }else if (resultOfCalculation === ""){
+        console.log("second Equals");
     num2 = Number(num.join(""));
     resultOfCalculation = operate(num1, num2, operator);
     screenContent.textContent = resultOfCalculation;
@@ -127,7 +129,16 @@ buttonEquals.addEventListener("click", ()=> {
     num1 = resultOfCalculation;
     num2 = "";
     operator = "";
-    }
+    } else{
+        console.log("third equals");
+    num1 = resultOfCalculation;
+    num2 = Number(num.join(""));
+    resultOfCalculation = operate(num1, num2, operator);
+    screenContent.textContent = resultOfCalculation;
+    screenContent.append;
+    num = [];
+    operator = "+";
+}
 });
 
 
@@ -234,16 +245,17 @@ subtraction.addEventListener("click", () => {
 const addition = document.querySelector(".additionButton");
 addition.addEventListener("click", () => {
     if(num.length === 0 && resultOfCalculation !== ""){
+        console.log("first");
         operator = "+";
     }else if (num.length === 0 && resultOfCalculation === ""){
-
+        console.log("second");
     } else if(num1 === ""){
-        console.log("cant be here?");
+        console.log("third");
         num1 = Number(num.join(""));
         operator = "+";
         num = [];
     } else if(num2 === "" && resultOfCalculation === ""){
-        console.log("#2 here?")
+        console.log("fourth")
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
         num = [];
@@ -251,7 +263,7 @@ addition.addEventListener("click", () => {
         screenContent.append;
         operator = "+";
         } else if (resultOfCalculation !== ""){
-            console.log("are we here?");
+            console.log("fifth");
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
