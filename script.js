@@ -159,7 +159,12 @@ buttonEquals.addEventListener("click", ()=> {
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));
-        screenContent.append;
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         num = [];
         num1 = resultOfCalculation;
         num2 = "";
@@ -169,6 +174,12 @@ buttonEquals.addEventListener("click", ()=> {
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
         screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));
+        if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         screenContent.append;
         num = [];
         operator = "+";
