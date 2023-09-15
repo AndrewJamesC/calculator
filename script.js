@@ -158,7 +158,7 @@ buttonEquals.addEventListener("click", ()=> {
         console.log("this");
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));
+        screenContent.textContent = parseFloat(resultOfCalculation);
             if(screenContent.textContent.length > 12 ){
             screenContent.textContent = "Error";
             screenContent.append;
@@ -173,14 +173,14 @@ buttonEquals.addEventListener("click", ()=> {
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));
+        resultOfCalculation = (resultOfCalculation.toFixed(5));
+        screenContent.textContent = parseFloat(resultOfCalculation);
         if(screenContent.textContent.length > 12 ){
             screenContent.textContent = "Error";
             screenContent.append;
             } else{
             screenContent.append;
             };
-        screenContent.append;
         num = [];
         operator = "+";
     }
@@ -216,16 +216,26 @@ division.addEventListener("click", () => {
     } else if(num2 === "" && resultOfCalculation === ""){
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         num = [];
         operator = "/";
     } else if (resultOfCalculation !== ""){
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         num = [];
         operator = "/";
     }
@@ -249,15 +259,25 @@ multiply.addEventListener("click", () => {
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
         num = [];
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         operator = "*";
         }  else if (resultOfCalculation !== ""){
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         num = [];
         operator = "*";
     }
@@ -281,15 +301,25 @@ subtraction.addEventListener("click", () => {
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
         num = [];
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+        if(screenContent.textContent.length > 12 ){
+        screenContent.textContent = "Error";
         screenContent.append;
+        } else{
+        screenContent.append;
+        };
         operator = "-";
     } else if (resultOfCalculation !== ""){
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         num = [];
         operator = "-";
     }
@@ -312,15 +342,25 @@ addition.addEventListener("click", () => {
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
         num = [];
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         operator = "+";
         } else if (resultOfCalculation !== ""){
         num1 = resultOfCalculation;
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
-        screenContent.textContent = parseFloat(parseFloat(parseFloat(resultOfCalculation.toFixed(5))));;
-        screenContent.append;
+        screenContent.textContent = parseFloat(resultOfCalculation);
+            if(screenContent.textContent.length > 12 ){
+            screenContent.textContent = "Error";
+            screenContent.append;
+            } else{
+            screenContent.append;
+            };
         num = [];
         operator = "+";
     }
