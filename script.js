@@ -1,4 +1,4 @@
-/// Allow user to input more than 5 numbers on number button click
+/// Still need to limit screen text to ~12 characters
 function operate(num1, num2, operator) {
     const arr = [num1, num2];
     let add = arr.reduce((total, current) => total + current,0);
