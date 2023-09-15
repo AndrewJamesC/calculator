@@ -155,9 +155,9 @@ buttonEquals.addEventListener("click", ()=> {
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (resultOfCalculation === ""){
-        console.log("this");
         num2 = Number(num.join(""));
         resultOfCalculation = operate(num1, num2, operator);
+        resultOfCalculation = (Number(resultOfCalculation)).toFixed(5);
         screenContent.textContent = parseFloat(resultOfCalculation);
             if(screenContent.textContent.length > 12 ){
             screenContent.textContent = "Error";
@@ -170,10 +170,14 @@ buttonEquals.addEventListener("click", ()=> {
         num2 = "";
         operator = "";
     } else{
-        num1 = resultOfCalculation;
+        console.log("before " + typeof resultOfCalculation);
+        num1 = Number(resultOfCalculation);
         num2 = Number(num.join(""));
+        console.log(num2);
         resultOfCalculation = operate(num1, num2, operator);
-        resultOfCalculation = (resultOfCalculation.toFixed(5));
+        console.log("after calc " + resultOfCalculation);
+        console.log(resultOfCalculation);
+        resultOfCalculation = (Number(resultOfCalculation)).toFixed(5);
         screenContent.textContent = parseFloat(resultOfCalculation);
         if(screenContent.textContent.length > 12 ){
             screenContent.textContent = "Error";
@@ -334,7 +338,8 @@ addition.addEventListener("click", () => {
         screenContent.textContent = "You can't divide by 0!";
         screenContent.append;
     }else if (num.length === 0 && resultOfCalculation === ""){
-        } else if(num1 === ""){
+    
+    } else if(num1 === ""){
         num1 = Number(num.join(""));
         operator = "+";
         num = [];
